@@ -95,33 +95,32 @@ body {
 }
 
 /* PROJECTS ----------------------------------------------------------------- */
-#projects {
+.projects {
     margin: 1.5em auto;
     width: 80%;
 }
-#projects-label {
+.projects-label {
     font-size: 2em;
     font-weight: bold;
     color: #F3AC43;
     margin: 0.1em;
 }
-#projects-icon {
+#projects-icon-1, #projects-icon-2 {
     color: #F3AC43;
     margin-right: 0.4em;
 }
-#projects-frame {
+.projects-frame {
     border: solid 0.3em #F3AC43;
     border-radius: 0em 2em;
     box-sizing: border-box;
 }
-#projects-grid {
+.projects-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-auto-columns: 1fr;
     gap: 1em 1em;
     grid-template-areas:
-      ". . ."
       ". . .";
     width: 100%;
     height: 100%;
@@ -139,7 +138,7 @@ body {
     box-sizing: border-box;
     transition: 100ms ease-out;
 }
-#projects-grid .project-box:hover {
+.projects-grid .project-box:hover {
     cursor: pointer;
     background-color: rgba(29, 51, 68, 0.22);
     transition: 150ms ease-out;
@@ -168,7 +167,7 @@ body {
     transition: 80ms ease-out;
     box-sizing: border-box;
 }
-#projects-grid .project-box:hover .project-box-thumbnail img {
+.projects-grid .project-box:hover .project-box-thumbnail img {
     transform: scale(1.05);
     border: solid 0.3em #F3AC43; 
     transition: 120ms ease-out;
@@ -199,13 +198,17 @@ body {
 }
 
 /* PROJECT ZOOMIN --------------------------------------------------------- */
-.project-template {
-    display: none;
+#modal-content-wrapper {
+    display: flex;
     flex-direction: row;
+    box-sizing: border-box;
     margin: 2em;
 }
+.project-template {
+    display: none;
+}
 .projet-box-zoomin {
-    width: 50%;
+    width: 60%;
     height: fit-content;
     margin-right: 2em;
 }
@@ -229,8 +232,10 @@ body {
     width: 100%;
 }
 .project-descriptions {
-    width: 50%;
+    width: 40%;
     padding: 0.5em 0em;
+    display: flex;
+    flex-direction: column;
 }
 .project-decription-header {
     margin-bottom: 0.5em;
@@ -241,7 +246,7 @@ body {
 }
 .project-decription-header-underline {
     height: 0.5em;
-    background: rgba(29, 51, 68, 0.22);
+    background: rgba(29, 51, 68, 0.32);
     position: absolute;
     transform: skewX(-30deg);
     bottom: 0em;
@@ -257,9 +262,92 @@ body {
 .project-description-text ul {
     margin-top: inherit;
     padding-left: 1em;
+    margin-bottom: 0;
 }
 .project-description-text ul li {
     list-style: square;
+}
+
+#modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: modal-fade-in 250ms cubic-bezier(0, 0.5, 0.5, 1);
+}
+@keyframes modal-fade-in {
+    0% {
+        background-color: rgba(0, 0, 0, 0); 
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.6); 
+    }
+}
+#modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    border-radius: 0.5em; 
+    left: 50%;
+    top: 50%;
+    padding: 1em;
+    width: 60%;
+    transform: translate(-50%, -50%);
+}
+.modal-anim-up {
+    animation: modal-anim-up 250ms cubic-bezier(0, 0.5, 0.5, 1);
+}
+@keyframes modal-anim-up {
+    0% {
+        top: 55%;
+    }
+    100% {
+        top: 50%;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    margin-right: 0.05em;
+    font-size: 2em;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-button-wrapper {
+    width: 100%;
+    text-align: center;
+    margin: 2.5em 0em;
+}
+.project-button {
+    width: 100%;
+    font-size: 1.2em;
+    background-color: #1D3344;
+    font-weight: bold;
+    color: white;
+    padding: 0.4em 1.2em;
+    border-radius: 1.5em;
+    border: solid 0.2em #1D3344;
+    text-decoration: none;
+    transition: linear 100ms;
+}
+.project-button:hover {
+    background-color: #13232D;
+    cursor: pointer;
+    box-shadow: 0em 0.2em 0 #F3AC43;
+    border: solid 0.2em #F3AC43;
+    padding: 0.4em 2em;
+    transition: linear 100ms;
 }
 
 /* FOOTER ----------------------------------------------------------------- */

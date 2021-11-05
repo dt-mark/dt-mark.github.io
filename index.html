@@ -4,9 +4,38 @@
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css">
         <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+            function openModal(contentID) {
+                $("#modal-content-wrapper").html($('#'+contentID).html());
+                $("#modal-content").addClass("modal-anim-up");
+                $("#modal").css('display', 'block');
+                var $body = $(document.body);
+                var oldWidth = $body.innerWidth();
+                $body.css("overflow", "hidden");
+                $body.width(oldWidth);
+            }
+            function closeModal() {
+                $("#modal-content").removeClass("modal-anim-up");
+                $("#modal").css('display', 'none');
+                var $body = $(document.body);
+                $body.css("overflow", "auto");
+                $body.width("auto");
+            }
+            window.onclick = function(event) {
+                if (event.target == document.getElementById("modal")) {
+                    closeModal();
+                }
+            }
+
+        </script>
     </head>
 
     <body>
+
+        <!-- ################################################################################################# -->
+        <!-- ################################################################################################# -->
         <div id="header">
             <div id="header-profile-pic">
                 <img src="resources/ProfilePic.png"/>
@@ -21,6 +50,8 @@
             </div>
         </div>
 
+        <!-- ################################################################################################# -->
+        <!-- ################################################################################################# -->
         <div id="links">
             <a class="button" href="resources/CV.pdf">
                 <span><i class="bi bi-file-earmark-pdf"></i> CV</span>
@@ -36,13 +67,17 @@
             </a>
         </div>
 
-        <div id="projects">
-            <div id="projects-label">
-                <span><i id="projects-icon" class="bi bi-box"></i>PROJECTS</span>
+        <!-- ################################################################################################# -->
+        <!-- ################################################################################################# -->
+        <div class="projects">
+            <div class="projects-label">
+                <span><i id="projects-icon-1" class="bi bi-box"></i>Main Projects</span>
             </div>
-            <div id="projects-frame">
-                <div id="projects-grid">
-                    <div class="project-box">
+            <div class="projects-frame">
+                <div class="projects-grid">
+
+                    <!-- TAWBS card -->
+                    <div class="project-box" onclick="openModal('tawbs')">
                         <div class="project-box-date">
                             2016 - 2021
                         </div>
@@ -59,7 +94,9 @@
                             Made with <b>Game Maker Studio</b>
                         </div>
                     </div>
-                    <div class="project-box">
+
+                    <!-- Chess Wars card -->
+                    <div class="project-box" onclick="openModal('chess-wars')">
                         <div class="project-box-date">
                             2020
                         </div>
@@ -76,7 +113,9 @@
                             Made with <b>Java Swing</b>
                         </div>
                     </div>
-                    <div class="project-box">
+
+                    <!-- The Agency Experiment card -->
+                    <div class="project-box" onclick="openModal('the-agency-experiment')">
                         <div class="project-box-date">
                             2021
                         </div>
@@ -93,7 +132,21 @@
                             Made with <b>JavaScript / CSS</b>
                         </div>
                     </div>
-                    <div class="project-box">
+                </div>
+            </div>
+        </div>
+
+        <!-- ################################################################################################# -->
+        <!-- ################################################################################################# -->
+        <div class="projects">
+            <div class="projects-label">
+                <span><i id="projects-icon-2" class="bi bi-x-diamond"></i>Other Small Projects</span>
+            </div>
+            <div class="projects-frame">
+                <div class="projects-grid">
+
+                    <!-- Pyuzle card -->
+                    <div class="project-box" onclick="openModal('pyuzle')">
                         <div class="project-box-date">
                             2021
                         </div>
@@ -110,7 +163,9 @@
                             Made with <b>Game Maker Studio</b>
                         </div>
                     </div>
-                    <div class="project-box">
+
+                    <!-- Maze Runners card -->
+                    <div class="project-box" onclick="openModal('maze-runners')">
                         <div class="project-box-date">
                             2019
                         </div>
@@ -127,7 +182,9 @@
                             Made with <b>JavaFX</b>
                         </div>
                     </div>
-                    <div class="project-box">
+
+                    <!-- Checkers card -->
+                    <div class="project-box" onclick="openModal('checkers')">
                         <div class="project-box-date">
                             2018
                         </div>
@@ -148,6 +205,20 @@
             </div>
         </div>
 
+
+        <!-- ################################################################################################# -->
+        <!-- ################################################################################################# -->
+
+        <div id="modal">
+            <div id="modal-content">
+                <span class="close" onclick="closeModal();">&times;</span>
+                <div id="modal-content-wrapper">
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TAWBS content template -->
         <div class="project-template" id="tawbs">
 
             <div class="project-box projet-box-zoomin">
@@ -158,10 +229,10 @@
                     <span><i class="bi bi-clock"></i> 5 years</span>
                 </div>
                 <div class="project-box-video">
-                    <!-- <img src="resources/thumbnails/TAWBS.png"/> -->
-                    <div class="project-box-video-wrapper">
-                        <iframe class="video" src="https://www.youtube.com/embed/taxy-7gYSbM" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <img src="resources/thumbnails/TAWBS.png"/>
+                    <!-- <div class="project-box-video-wrapper">
+                        <iframe class="video" src="//www.youtube.com/embed/taxy-7gYSbM" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div> -->
                 </div>
                 <div class="project-box-name">
                     TAWBS
@@ -183,20 +254,22 @@
                 <div class="project-description-text">
                     <ul>
                         <li>
-                            Collaborated with a musician to compose the <a href="https://www.youtube.com/watch?v=T7msnTPn75w&list=PLWK6_K_GCqMFgB-gH5U5mqxTOzBdzT5VO">full original soundtrack</a>
+                            Collaborated with a musician to compose the <a href="https://www.youtube.com/watch?v=T7msnTPn75w&list=PLWK6_K_GCqMFgB-gH5U5mqxTOzBdzT5VO" target="_blank">full OST</a> 
                         </li>
                         <li>
-                            Wrote a <a href="https://www.yoyogames.com/blog/548/visually-striking-minimalism-with-tawbs">technical devlog</a> on Game Maker's official blog, about the pause menu's design
+                            Wrote a <a href="https://www.yoyogames.com/blog/548/visually-striking-minimalism-with-tawbs" target="_blank">technical devlog</a> on Game Maker's official blog, about the pause menu's design
                         </li>
                         <li>
-                            Showcased the game at a <a href="https://tawbs.wordpress.com/2019/09/29/tgs-lyon-postmortem/">pop-culture convention</a>
+                            Showcased the game at a <a href="https://tawbs.wordpress.com/2019/09/29/tgs-lyon-postmortem/" target="_blank">pop-culture convention</a>
                         </li>
                     </ul>
                 </div>
+                <div class="project-button-wrapper"><a class="project-button" href="https://dt-mark.itch.io/tawbs" target="_blank">See More</a></div>
             </div>
 
         </div>
 
+        <!-- Chess Wars content template -->
         <div class="project-template" id="chess-wars">
 
             <div class="project-box projet-box-zoomin">
@@ -207,10 +280,10 @@
                     <span><i class="bi bi-clock"></i> 11 weeks</span>
                 </div>
                 <div class="project-box-video">
-                    <!-- <img src="resources/thumbnails/ChessWars.png"/> -->
-                    <div class="project-box-video-wrapper">
-                        <iframe class="video" src="https://www.youtube.com/embed/1YFfiu8-nGk" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
+                    <img src="resources/thumbnails/ChessWars.png"/> 
+                    <!-- <div class="project-box-video-wrapper">
+                        <iframe class="video" src="//www.youtube.com/embed/1YFfiu8-nGk" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div> -->
                 </div>
                 <div class="project-box-name">
                     Chess Wars
@@ -228,10 +301,12 @@
                 <div class="project-description-text">
                     This was my second-year computer science project at INSA, made in a team of 4. I was the project manager, lead gameplay programmer, and graphics programmer.
                 </div>
+                <div class="project-button-wrapper"><a class="project-button" href="https://dt-mark.itch.io/chess-wars" target="_blank">See More</a></div>
             </div>
 
         </div>
 
+        <!-- Agency Experiment content template -->
         <div class="project-template" id="the-agency-experiment">
 
             <div class="project-box projet-box-zoomin">
@@ -258,12 +333,13 @@
                 </div>
                 <div class="project-decription-header"><div class="project-decription-header-underline"></div>Context</div>
                 <div class="project-description-text">
-                    This was an internship project at the Neuroscience Reasearch Center of Lyon. I collaborated with researchers to design the experiment and implemented & deployed it from A to Z. 
+                    This was an internship project at the Neuroscience Reasearch Center of Lyon. I collaborated with researchers to design the experiment, then implemented & deployed it. 
                 </div>
             </div>
 
         </div>
 
+        <!-- Pyuzle content template -->
         <div class="project-template" id="pyuzle">
 
             <div class="project-box projet-box-zoomin">
@@ -310,6 +386,7 @@
 
         </div>
 
+        <!-- Maze Runners content template -->
         <div class="project-template" id="maze-runners">
 
             <div class="project-box projet-box-zoomin">
@@ -342,6 +419,7 @@
 
         </div>
 
+        <!-- Checkers content template -->
         <div class="project-template" id="checkers">
 
             <div class="project-box projet-box-zoomin">
@@ -374,7 +452,8 @@
 
         </div>
 
-        
+        <!-- ################################################################################################# -->
+        <!-- ################################################################################################# -->
         <div id="row">
         <div id="footer">
             <div id="footer-text">

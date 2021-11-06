@@ -469,4 +469,15 @@ body {
     #header-text-description, #footer-text-description {
         font-size: 1.1em;
     }
+    #header-text-description > div {
+        margin-bottom: 0.6em; 
+    }
+    .button {
+        font-size: 1.1em;
+        padding: 0.16em 0.4em;
+        margin: 0.4em 0.6em;
+        border-radius: 1em;
+        border: solid 2px rgba(0, 0, 0, 0);
+        text-decoration: none;
+    }
 }

@@ -454,4 +454,19 @@ body {
             background-color: white; 
         }
     }
+    #header-profile-pic {
+        width: 100%;
+    }
+    .projects-label {
+        font-size: 1.6em;
+    }
+    .projects-frame {
+        border: solid 0.2em #F3AC43;
+    }
+    #header-text-name, #footer-text-header {
+        font-size: 1.4em;
+    }
+    #header-text-description, #footer-text-description {
+        font-size: 1.1em;
+    }
 }

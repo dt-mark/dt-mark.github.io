@@ -6,32 +6,6 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css">
         <link rel="stylesheet" href="main.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
-        <script>
-
-            function openModal(contentID) {
-                $("#modal-content-wrapper").html($('#'+contentID).html());
-                $("#modal-content").addClass("modal-anim-up");
-                $("#modal").css('display', 'block');
-                var $body = $(document.body);
-                var oldWidth = $body.innerWidth();
-                $body.css("overflow", "hidden");
-                $body.width(oldWidth);
-            }
-            function closeModal() {
-                $("#modal-content").removeClass("modal-anim-up");
-                $("#modal").css('display', 'none');
-                var $body = $(document.body);
-                $body.css("overflow", "auto");
-                $body.width("auto");
-            }
-            window.onclick = function(event) {
-                if (event.target == document.getElementById("modal")) {
-                    closeModal();
-                }
-            }
-
-        </script>
     </head>
 
     <body>
@@ -76,7 +50,7 @@
                 <span><i id="projects-icon-1" class="bi bi-box"></i>Main Projects</span>
             </div>
             <div class="projects-frame">
-                <div class="projects-grid">
+                <div class="projects-grid" id="projects-grid-1">
 
                     <!-- TAWBS card -->
                     <div class="project-box" onclick="openModal('tawbs')">
@@ -145,7 +119,7 @@
                 <span><i id="projects-icon-2" class="bi bi-x-diamond"></i>Other Small Projects</span>
             </div>
             <div class="projects-frame">
-                <div class="projects-grid">
+                <div class="projects-grid" id="projects-grid-2">
 
                     <!-- Pyuzle card -->
                     <div class="project-box" onclick="openModal('pyuzle')">
@@ -165,6 +139,27 @@
                         </div>
                         <div class="project-box-madewith">
                             Made with <b>Game Maker Studio</b>
+                        </div>
+                    </div>
+
+                    <!-- More card -->
+                    <div class="project-box" onclick="openModal('more')">
+                        <div class="project-box-date">
+                            2020 - Now
+                        </div>
+                        <!--
+                        <div class="project-box-duration">
+                            <span><i class="bi bi-clock"></i> 6 weeks</span>
+                        </div> 
+                        -->
+                        <div class="project-box-thumbnail">
+                            <img src="resources/thumbnails/More.png"/> 
+                        </div>
+                        <div class="project-box-name">
+                            Miscellaneous
+                        </div>
+                        <div class="project-box-madewith">
+                             
                         </div>
                     </div>
 
@@ -217,7 +212,7 @@
         <!-- ################################################################################################# -->
         <!-- ################################################################################################# -->
 
-        <div id="modal">
+        <div id="modal"> 
             <div id="modal-content">
                 <span class="close" onclick="closeModal();">&times;</span>
                 <div id="modal-content-wrapper">
@@ -237,15 +232,9 @@
                     <span><i class="bi bi-clock"></i> 5 years</span>
                 </div>
                 <div class="project-box-video">
-                    <!-- <img src="resources/thumbnails/TAWBS.png"/> -->
-                    <video data-yt2html5="https://www.youtube.com/watch?v=taxy-7gYSbM" controls poster="resources/thumbnails/TAWBS.png"></video> 
-                    <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
-                    <script> new YouTubeToHtml5(); </script>
-                    <!--
                     <div class="project-box-video-wrapper">
                         <iframe class="video" src="//www.youtube.com/embed/taxy-7gYSbM" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
                     </div>
-                    -->
                 </div>
                 <div class="project-box-name">
                     TAWBS
@@ -293,13 +282,9 @@
                     <span><i class="bi bi-clock"></i> 11 weeks</span>
                 </div>
                 <div class="project-box-video">
-                    <!-- <img src="resources/thumbnails/ChessWars.png"/> -->
-                    <video data-yt2html5="https://www.youtube.com/watch?v=1YFfiu8-nGk" controls poster="resources/thumbnails/ChessWars.png"></video> 
-                    <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
-                    <script> new YouTubeToHtml5(); </script>
-                    <!-- <div class="project-box-video-wrapper">
+                    <div class="project-box-video-wrapper"> 
                         <iframe class="video" src="//www.youtube.com/embed/1YFfiu8-nGk" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="project-box-name">
                     Chess Wars
@@ -333,7 +318,9 @@
                     <span><i class="bi bi-clock"></i> 11 weeks</span>
                 </div>
                 <div class="project-box-video">
-                    <img src="resources/thumbnails/OddShapeClicker.png"/> 
+                    <div class="project-box-video-wrapper"> 
+                        <iframe class="video" src="//www.youtube.com/embed/EyLbSIVEyno?modestbranding=1&iv_load_policy=3&rel=0&showinfo=0&controls=0&autoplay=1&muted=1&loop=1&playlist=EyLbSIVEyno" frameborder="0" allowfullscreen></iframe> 
+                    </div>
                 </div>
                 <div class="project-box-name">
                     Odd Shape Clicker
@@ -368,7 +355,9 @@
                 </div>
                 -->
                 <div class="project-box-video">
-                    <img src="resources/thumbnails/Pyuzle.png"/> 
+                    <div class="project-box-video-wrapper">
+                        <iframe class="video" src="//www.youtube.com/embed/OGwyzPSgY4Q?modestbranding=1&iv_load_policy=3&rel=0&showinfo=0&controls=0&autoplay=1&muted=1&loop=1&playlist=OGwyzPSgY4Q" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    </div>
                 </div>
                 <div class="project-box-name">
                     Pyuzle
@@ -404,6 +393,51 @@
 
         </div>
 
+        <!-- More Projects content template -->
+        <div class="project-template" id="more">
+
+            <div class="project-box projet-box-zoomin">
+                <div class="project-box-date">
+                    2020 - Now
+                </div>
+                <!--
+                <div class="project-box-duration">
+                    <span><i class="bi bi-clock"></i> 6 weeks</span>
+                </div>
+                -->
+                <div class="project-box-video">
+                    <img src="resources/thumbnails/More.png"/>
+                </div>
+                <div class="project-box-name">
+                    Miscellaneous
+                </div>
+                <div class="project-box-madewith">
+                     
+                </div>
+            </div>
+            <div class="project-descriptions">
+                <div class="project-decription-header"><div class="project-decription-header-underline"></div>Description</div>
+                <div class="project-description-text">
+                    Throughout my computer science studies, I have worked on many different projects, revolving mostly around: <br/><br/>
+                    <ul>
+                        <li>
+                            Computer graphics with <a href="https://twitter.com/dtmark_/status/1335265083258245122" target="_blank">ray-marching shaders</a>
+                        </li>
+                        <li>
+                            Software development in Java and C++
+                        </li>
+                        <li>
+                            Web development and distributed applications
+                        </li>
+                        <li>
+                            AI programming in C and Prolog
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
         <!-- Maze Runners content template -->
         <div class="project-template" id="maze-runners">
 
@@ -417,7 +451,9 @@
                 </div>
                 -->
                 <div class="project-box-video">
-                    <img src="resources/thumbnails/MazeRunners.png"/> 
+                    <div class="project-box-video-wrapper">
+                        <iframe class="video" src="//www.youtube.com/embed/3zLJs3HHtic?modestbranding=1&iv_load_policy=3&rel=0&showinfo=0&controls=0&autoplay=1&muted=1&loop=1&playlist=3zLJs3HHtic" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    </div>
                 </div>
                 <div class="project-box-name">
                     Maze Runners
@@ -452,7 +488,9 @@
                 </div>
                 -->
                 <div class="project-box-video">
-                    <img src="resources/thumbnails/Checkers.png"/> 
+                    <div class="project-box-video-wrapper">
+                        <iframe class="video" src="//www.youtube.com/embed/vT8dPj8zyig?modestbranding=1&iv_load_policy=3&rel=0&showinfo=0&controls=0&autoplay=1&muted=1&loop=1&playlist=vT8dPj8zyig" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    </div>
                 </div>
                 <div class="project-box-name">
                     Checkers
@@ -488,6 +526,42 @@
             </div>
         </div>
         </div>
+
+        <script>
+
+
+            function resizeIframe() {
+                let w = parseInt($('.projet-box-zoomin').css('width'))*0.9; let h = 720/1280 * w;
+                $('.projet-box-zoomin iframe').prop('width', w); $('.projet-box-zoomin iframe').prop('height', h);
+            }
+
+            function openModal(contentID) {
+                $("#modal-content-wrapper").html($('#'+contentID).html());
+                $("#modal-content").addClass("modal-anim-up");
+                $("#modal").css('display', 'block');
+                var $body = $(document.body);
+                var oldWidth = $body.innerWidth();
+                $body.css("overflow", "hidden");
+                $body.width(oldWidth);
+                resizeIframe();
+            }
+
+            function closeModal() {
+                $("#modal-content").removeClass("modal-anim-up");
+                $("#modal").css('display', 'none');
+                var $body = $(document.body);
+                $body.css("overflow", "auto");
+                $body.width("auto");
+            }
+
+            window.onclick = function(event) {
+                if (event.target == document.getElementById("modal")) {
+                    closeModal();
+                }
+            }
+            window.onresize = resizeIframe;            
+
+        </script>
     
     </body>
 

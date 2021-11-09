@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css">
         <link rel="stylesheet" href="main.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
         <script>
 
             function openModal(contentID) {
@@ -115,8 +116,8 @@
                         </div>
                     </div>
 
-                    <!-- The Agency Experiment card -->
-                    <div class="project-box" onclick="openModal('the-agency-experiment')">
+                    <!-- Odd Shape Clicker card -->
+                    <div class="project-box" onclick="openModal('odd-shape-clicker')">
                         <div class="project-box-date">
                             2021
                         </div>
@@ -124,10 +125,10 @@
                             <span><i class="bi bi-clock"></i> 11 weeks</span>
                         </div>
                         <div class="project-box-thumbnail">
-                            <img src="resources/thumbnails/TheAgencyExperiment.png"/>
+                            <img src="resources/thumbnails/OddShapeClicker.png"/>
                         </div>
                         <div class="project-box-name">
-                            The Agency Experiment
+                            Odd Shape Clicker
                         </div>
                         <div class="project-box-madewith">
                             Made with <b>JavaScript / CSS</b>
@@ -151,9 +152,11 @@
                         <div class="project-box-date">
                             2021
                         </div>
+                        <!--
                         <div class="project-box-duration">
                             <span><i class="bi bi-clock"></i> 6 weeks</span>
-                        </div>
+                        </div> 
+                        -->
                         <div class="project-box-thumbnail">
                             <img src="resources/thumbnails/Pyuzle.png"/> 
                         </div>
@@ -170,9 +173,11 @@
                         <div class="project-box-date">
                             2019
                         </div>
+                        <!--
                         <div class="project-box-duration">
                             <span><i class="bi bi-clock"></i> 5 weeks</span>
                         </div>
+                        -->
                         <div class="project-box-thumbnail">
                             <img src="resources/thumbnails/MazeRunners.png"/>
                         </div>
@@ -189,9 +194,11 @@
                         <div class="project-box-date">
                             2018
                         </div>
+                        <!--
                         <div class="project-box-duration">
                             <span><i class="bi bi-clock"></i> 6 weeks</span>
                         </div>
+                        -->
                         <div class="project-box-thumbnail">
                             <img src="resources/thumbnails/Checkers.png"/> 
                         </div>
@@ -230,10 +237,15 @@
                     <span><i class="bi bi-clock"></i> 5 years</span>
                 </div>
                 <div class="project-box-video">
-                    <img src="resources/thumbnails/TAWBS.png"/>
-                    <!-- <div class="project-box-video-wrapper">
-                        <iframe class="video" src="//www.youtube.com/embed/taxy-7gYSbM" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div> -->
+                    <!-- <img src="resources/thumbnails/TAWBS.png"/> -->
+                    <video data-yt2html5="https://www.youtube.com/watch?v=taxy-7gYSbM" controls poster="resources/thumbnails/TAWBS.png"></video> 
+                    <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
+                    <script> new YouTubeToHtml5(); </script>
+                    <!--
+                    <div class="project-box-video-wrapper">
+                        <iframe class="video" src="//www.youtube.com/embed/taxy-7gYSbM" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                    </div>
+                    -->
                 </div>
                 <div class="project-box-name">
                     TAWBS
@@ -281,7 +293,10 @@
                     <span><i class="bi bi-clock"></i> 11 weeks</span>
                 </div>
                 <div class="project-box-video">
-                    <img src="resources/thumbnails/ChessWars.png"/> 
+                    <!-- <img src="resources/thumbnails/ChessWars.png"/> -->
+                    <video data-yt2html5="https://www.youtube.com/watch?v=1YFfiu8-nGk" controls poster="resources/thumbnails/ChessWars.png"></video> 
+                    <script src="https://cdn.jsdelivr.net/gh/thelevicole/youtube-to-html5-loader@4.0.1/dist/YouTubeToHtml5.js"></script>
+                    <script> new YouTubeToHtml5(); </script>
                     <!-- <div class="project-box-video-wrapper">
                         <iframe class="video" src="//www.youtube.com/embed/1YFfiu8-nGk" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div> -->
@@ -307,8 +322,8 @@
 
         </div>
 
-        <!-- Agency Experiment content template -->
-        <div class="project-template" id="the-agency-experiment">
+        <!-- Odd Shape Clicker content template -->
+        <div class="project-template" id="odd-shape-clicker">
 
             <div class="project-box projet-box-zoomin">
                 <div class="project-box-date">
@@ -318,10 +333,10 @@
                     <span><i class="bi bi-clock"></i> 11 weeks</span>
                 </div>
                 <div class="project-box-video">
-                    <img src="resources/thumbnails/TheAgencyExperiment.png"/> 
+                    <img src="resources/thumbnails/OddShapeClicker.png"/> 
                 </div>
                 <div class="project-box-name">
-                    The Agency Experiment
+                    Odd Shape Clicker
                 </div>
                 <div class="project-box-madewith">
                     Made with <b>JavaScript / CSS</b>
@@ -330,7 +345,7 @@
             <div class="project-descriptions">
                 <div class="project-decription-header"><div class="project-decription-header-underline"></div>Description</div>
                 <div class="project-description-text">
-                    An online behavioural experiment / game, designed to help with research on the sense of agency. Uses custom-made machine-learning algorithms.
+                    An online behavioural experiment / game, designed to help with research in cognitive sciences. Uses custom-made machine-learning algorithms to analyse mouse movements.
                 </div>
                 <div class="project-decription-header"><div class="project-decription-header-underline"></div>Context</div>
                 <div class="project-description-text">
@@ -347,9 +362,11 @@
                 <div class="project-box-date">
                     2021
                 </div>
+                <!--
                 <div class="project-box-duration">
                     <span><i class="bi bi-clock"></i> 6 weeks</span>
                 </div>
+                -->
                 <div class="project-box-video">
                     <img src="resources/thumbnails/Pyuzle.png"/> 
                 </div>
@@ -394,9 +411,11 @@
                 <div class="project-box-date">
                     2019
                 </div>
+                <!--
                 <div class="project-box-duration">
                     <span><i class="bi bi-clock"></i> 5 weeks</span>
                 </div>
+                -->
                 <div class="project-box-video">
                     <img src="resources/thumbnails/MazeRunners.png"/> 
                 </div>
@@ -427,9 +446,11 @@
                 <div class="project-box-date">
                     2018
                 </div>
+                <!--
                 <div class="project-box-duration">
                     <span><i class="bi bi-clock"></i> 6 weeks</span>
                 </div>
+                -->
                 <div class="project-box-video">
                     <img src="resources/thumbnails/Checkers.png"/> 
                 </div>

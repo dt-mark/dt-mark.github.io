@@ -343,16 +343,15 @@ body {
     color: white;
     padding: 0.4em 1.2em;
     border-radius: 1.5em;
-    border: solid 0.2em #1D3344;
+    border: solid 2px #1D3344;
     text-decoration: none;
     transition: linear 100ms;
 }
 .project-button:hover {
     background-color: #13232D;
     cursor: pointer;
-    box-shadow: 0.6em 0em 0 #F3AC43;
-    border: solid 0.2em #F3AC43;
-    padding: 0.4em 2em; 
+    box-shadow: 0em 6px 0 #F3AC43;
+    border: solid 2px #F3AC43;
     transition: linear 100ms;
 }
 

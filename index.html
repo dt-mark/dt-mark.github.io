@@ -12,47 +12,45 @@
 
         <!-- ################################################################################################# -->
         <!-- ################################################################################################# -->
+
         <div id="header">
+
             <div id="header-profile-pic">
-                <img src="resources/ProfilePic.png"/>
+                <img src="resources/profile_pics/FormalBWLight.png"></img>
             </div>
-            <div id="header-text">
-                <div id="header-text-name">
-                    Marcus Toma
+            <div id="header_info">
+                <div id="header_header">
+                    <div id="header_title">Marcus Toma</div>
+                    <div id="header_subtitle">Game Development Portfolio</div>
                 </div>
-                <div id="header-text-description">
-                    <div>IT engineering student, pursuing a MSc in Computer Sciences at INSA Lyon, France.</div>In my spare time, I hone my technical & creative skills by working on a variety of projects.
+                    <div id="header_description">Currently working as a Research Data Scientist, my journey in the world of computer science initially began with hobby game development projects. Here is a portfolio of all the games I made while I was a student. </div>
+                <div id="contact_info">
+                    <a class="contact_info_item" href="resources/CV.pdf" target="_blank"><i class="bi bi-file-earmark-pdf-fill"></i> <div>Resume</div> </a>
+                    <a class="contact_info_item" href="https://www.linkedin.com/in/marcus-toma/" target="_blank"><i class="bi bi-linkedin"></i> <div>Linkedin</div> </a>
+                    <a class="contact_info_item" href="https://www.youtube.com/c/DTMark/" target="_blank"><i class="bi bi-youtube"></i> <div>Youtube</div> </a>
+                    <a class="contact_info_item" href="https://twitter.com/dtmark_" target="_blank"><i class="bi bi-twitter"></i> <div>Twitter</div> </a>
+                    <a class="contact_info_item" href="mailto:d.marcus.toma@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i> <div>Email</div> </a>
                 </div>
             </div>
+
         </div>
+
+
 
         <!-- ################################################################################################# -->
         <!-- ################################################################################################# -->
-        <div id="links">
-            <!-- 
-            <a class="button" href="resources/CV.pdf">
-                <span><i class="bi bi-file-earmark-pdf"></i> CV</span>
-            </a>
-            -->
-            <a class="button" href="https://www.linkedin.com/in/marcus-toma/">
-                <span><i class="bi bi-linkedin"></i> Linkedin</span>
-            </a>
-            <a class="button" href="https://www.youtube.com/c/DTMark/">
-                <span><i class="bi bi-youtube"></i> Youtube</span>
-            </a>
-            <a class="button" href="https://twitter.com/dtmark_">
-                <span><i class="bi bi-twitter"></i></i> Twitter</span>
-            </a>
-        </div>
+
+        <div class="projects_wrapper">
+        
 
         <!-- ################################################################################################# -->
         <!-- ################################################################################################# -->
         <div class="projects">
             <div class="projects-label">
-                <span><i id="projects-icon-1" class="bi bi-box"></i>Main Projects</span>
+                <i id="projects-icon-1" class="bi bi-box"></i>MAIN PROJECTS
             </div>
             <div class="projects-frame">
-                <div class="projects-grid" id="projects-grid-1">
+                <div class="projects-grid">
 
                     <!-- TAWBS card -->
                     <div class="project-box" onclick="openModal('tawbs')">
@@ -110,6 +108,7 @@
                             Made with <b>JavaScript / CSS</b>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -118,10 +117,10 @@
         <!-- ################################################################################################# -->
         <div class="projects">
             <div class="projects-label">
-                <span><i id="projects-icon-2" class="bi bi-x-diamond"></i>Other Small Projects</span>
+                <i id="projects-icon-2" class="bi bi-x-diamond"></i>BABY PROJECTS
             </div>
             <div class="projects-frame">
-                <div class="projects-grid" id="projects-grid-2">
+                <div class="projects-grid">
 
                     <!-- Pyuzle card -->
                     <div class="project-box" onclick="openModal('pyuzle')">
@@ -141,27 +140,6 @@
                         </div>
                         <div class="project-box-madewith">
                             Made with <b>Game Maker Studio</b>
-                        </div>
-                    </div>
-
-                    <!-- More card -->
-                    <div class="project-box" onclick="openModal('more')">
-                        <div class="project-box-date">
-                            2020 - Now
-                        </div>
-                        <!--
-                        <div class="project-box-duration">
-                            <span><i class="bi bi-clock"></i> 6 weeks</span>
-                        </div> 
-                        -->
-                        <div class="project-box-thumbnail">
-                            <img src="resources/thumbnails/More.png"/> 
-                        </div>
-                        <div class="project-box-name">
-                            Miscellaneous
-                        </div>
-                        <div class="project-box-madewith">
-                             
                         </div>
                     </div>
 
@@ -210,6 +188,8 @@
             </div>
         </div>
 
+        </div>
+
 
         <!-- ################################################################################################# -->
         <!-- ################################################################################################# -->
@@ -252,16 +232,16 @@
                 </div>
                 <div class="project-decription-header"><div class="project-decription-header-underline"></div>Context</div>
                 <div class="project-description-text">
-                    This was my first game development project, started with no prior programming / art / design experience.
+                    This was my first game development project, started with no prior programming or design experience.
                 </div>
                 <div class="project-decription-header"><div class="project-decription-header-underline"></div>Project Highlights</div> 
                 <div class="project-description-text">
                     <ul>
                         <li>
-                            Collaborated with a musician to compose the <a href="https://www.youtube.com/watch?v=T7msnTPn75w&list=PLWK6_K_GCqMFgB-gH5U5mqxTOzBdzT5VO" target="_blank">full OST</a> 
+                            Collaborated with a musician to compose the <a href="https://www.youtube.com/watch?v=T7msnTPn75w&list=PLWK6_K_GCqMFgB-gH5U5mqxTOzBdzT5VO" target="_blank">original soundtrack</a> 
                         </li>
                         <li>
-                            Wrote a <a href="https://www.yoyogames.com/blog/548/visually-striking-minimalism-with-tawbs" target="_blank">technical devlog</a> on Game Maker's official blog, about the pause menu's design
+                            Wrote a <a href="https://www.yoyogames.com/blog/548/visually-striking-minimalism-with-tawbs" target="_blank">technical devlog</a> on Game Maker's official blog discussing the pause menu's design
                         </li>
                         <li>
                             Showcased the game at a <a href="https://tawbs.wordpress.com/2019/09/29/tgs-lyon-postmortem/" target="_blank">pop-culture convention</a>
@@ -334,7 +314,7 @@
             <div class="project-descriptions">
                 <div class="project-decription-header"><div class="project-decription-header-underline"></div>Description</div>
                 <div class="project-description-text">
-                    An online behavioural experiment / game, designed to help with research in cognitive sciences. Uses custom-made machine-learning algorithms to analyse mouse movements.
+                    A gamified behavioural experiment designed to help with research in cognitive sciences. Uses custom machine-learning algorithms to analyse mouse movements and predict user actions in real time.
                 </div>
                 <div class="project-decription-header"><div class="project-decription-header-underline"></div>Context</div>
                 <div class="project-description-text">
@@ -387,7 +367,7 @@
                             Generic system to build puzzle piece models for any kind of given polygon
                         </li>
                         <li>
-                            Generic system to generate irregular grids 
+                            Generic system to generate irregular grids of pieces
                         </li>
                     </ul>
                 </div>
@@ -521,25 +501,10 @@
                 </div>
                 <div class="project-decription-header"><div class="project-decription-header-underline"></div>Context</div>
                 <div class="project-description-text">
-                    This was my last-year algorithmics project in high-school, made with a partner.
+                    This was my high-school algorithmics project, made in a team of 2.
                 </div>
             </div>
 
-        </div>
-
-        <!-- ################################################################################################# -->
-        <!-- ################################################################################################# -->
-        <div id="row">
-        <div id="footer">
-            <div id="footer-text">
-                <div id="footer-text-header">
-                    Let's talk!
-                </div>
-                <div id="footer-text-description">
-                    Reach out to me by sending an email at <b><a id="email" href="mailto: d.marcus.toma@gmail.com">d.marcus.toma@gmail.com</a></b>,<br/>or by contacting me on social media.  
-                </div>
-            </div>
-        </div>
         </div>
 
         <script>

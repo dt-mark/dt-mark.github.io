@@ -524,15 +524,24 @@
                 $body.css("overflow", "hidden");
                 $body.width(oldWidth);
                 resizeIframe();
+                window.history.pushState("forward", null, "");
             }
 
             function closeModal() {
+                window.history.back();
+            }
+
+            function hideModal() {
                 $("#modal-content").removeClass("modal-anim-up");
                 $("#modal").css('display', 'none');
                 var $body = $(document.body);
                 $body.css("overflow", "auto");
                 $body.width("auto");
             }
+            
+            $(window).on("popstate", function() {
+                hideModal();
+            });
 
             window.onclick = function(event) {
                 if (event.target == document.getElementById("modal")) {

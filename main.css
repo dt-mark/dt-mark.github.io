@@ -503,6 +503,7 @@ a {
         width: 100%;
         top: 0;
         transform: translate(-50%, 0);
+        padding: 0;
     }
     @keyframes modal-anim-up {
         0% {
@@ -522,9 +523,6 @@ a {
         100% {
             background-color: white; 
         }
-    }
-    .projects-label {
-        font-size: 1.6em;
     }
     #header-text-name, #footer-text-header {
         font-size: 1.4em;
@@ -551,6 +549,9 @@ a {
     #header {
         flex-direction: column;
     }
+    #header_description {
+        text-align: center;
+    }
     #header-profile-pic {
         width: 100%;
     }
@@ -558,5 +559,9 @@ a {
         padding-top: 0.5em;
         padding-bottom: 0.5em;
         gap: 0 0.5em;
+    }
+    .projects-label {
+        font-size: 1.6em;
+        padding-right: 0.5em;
     }
 }

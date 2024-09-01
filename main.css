@@ -550,7 +550,7 @@ a {
         flex-direction: column;
     }
     #header_description {
-        text-align: center;
+        text-align: left;
     }
     #header-profile-pic {
         width: 100%;

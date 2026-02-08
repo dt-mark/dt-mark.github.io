@@ -25,10 +25,10 @@
 :root {
     --very-light-gray: #f4f4f4;
     --light-gray: #f0f0f0;
-    --mid-gray: #bdbdbd;
+    --mid-gray: #cacaca;
     --dark-gray: #505050;
-    --main-col: #00253b;
-    --link-col: #004b9c;
+    --main-col: rgb(12, 53, 77);
+    --link-col: rgb(106, 136, 158); /*#004b9c;*/
 }
 
 /* MAIN ----------------------------------------------------------------- */
@@ -147,10 +147,10 @@ a {
     transition: 100ms linear;
 }
 .contact_info_item:hover {
-    background-color: white;
+    background-color: #fafafa;
     transition: 100ms linear;
 }
-.contact_info_item:hover>i {
+.contact_info_item:hover {
     color: var(--link-col);
     transition: 100ms linear;
 }
@@ -187,7 +187,7 @@ a {
     position: relative;
     /*width: fit-content;*/
     border-bottom: 1px solid var(--mid-gray);
-    color: var(--dark-gray);
+    color: var(--main-col);
 }
 .projects-label>i {
     /*color: var(--dark-gray);*/
@@ -327,7 +327,7 @@ a {
 }
 .project-decription-header-underline {
     height: 0.5em;
-    background: rgba(29, 51, 68, 0.32);
+    background: rgba(29, 51, 68, 0.22);
     position: absolute;
     transform: skewX(-30deg);
     bottom: 0em;
@@ -428,7 +428,7 @@ a {
 .project-button:hover {
     cursor: pointer;
     color: var(--link-col);
-    background-color: rgba(56, 56, 56, 0.15);
+    background-color: #fafafa; /*rgba(56, 56, 56, 0.15);*/
     padding: 0.25em 1em;
     border-bottom: solid 2px var(--link-col);
     /*border-right: solid 2px var(--main-col);*/

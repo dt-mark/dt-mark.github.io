@@ -10,6 +10,8 @@
 
     <body>
 
+        <div class="bg"><div class="bg-el"></div></div>
+
         <!-- ################################################################################################# -->
         <!-- ################################################################################################# -->
 
@@ -27,9 +29,9 @@
                 <div id="contact_info">
                     <a class="contact_info_item" href="resources/CV.pdf" target="_blank"><i class="bi bi-file-earmark-pdf-fill"></i> <div>Resume</div> </a>
                     <a class="contact_info_item" href="https://www.linkedin.com/in/marcus-toma/" target="_blank"><i class="bi bi-linkedin"></i> <div>Linkedin</div> </a>
-                    <a class="contact_info_item" href="https://www.youtube.com/c/DTMark/" target="_blank"><i class="bi bi-youtube"></i> <div>Youtube</div> </a>
-                    <a class="contact_info_item" href="https://twitter.com/dtmark_" target="_blank"><i class="bi bi-twitter"></i> <div>Twitter</div> </a>
                     <a class="contact_info_item" href="mailto:d.marcus.toma@gmail.com" target="_blank"><i class="bi bi-envelope-fill"></i> <div>Email</div> </a>
+                    <a class="contact_info_item" href="https://www.youtube.com/c/DTMark/" target="_blank"><i class="bi bi-youtube"></i> <div>Youtube</div> </a>
+                    <!--<a class="contact_info_item" href="https://twitter.com/dtmark_" target="_blank"><i class="bi bi-twitter"></i> <div>Twitter</div> </a>-->
                 </div>
             </div>
 
@@ -127,11 +129,6 @@
                         <div class="project-box-date">
                             2021
                         </div>
-                        <!--
-                        <div class="project-box-duration">
-                            <span><i class="bi bi-clock"></i> 6 weeks</span>
-                        </div> 
-                        -->
                         <div class="project-box-thumbnail">
                             <img src="resources/thumbnails/Pyuzle.png"/> 
                         </div>
@@ -148,11 +145,6 @@
                         <div class="project-box-date">
                             2019
                         </div>
-                        <!--
-                        <div class="project-box-duration">
-                            <span><i class="bi bi-clock"></i> 5 weeks</span>
-                        </div>
-                        -->
                         <div class="project-box-thumbnail">
                             <img src="resources/thumbnails/MazeRunners.png"/>
                         </div>
@@ -181,6 +173,23 @@
                         </div>
                     </div>
                     -->
+
+                    <!-- More card -->
+                    <div class="project-box" onclick="openModal('more')">
+                    <div class="project-box-date">
+                        2020 - Now
+                    </div>
+                    <div class="project-box-thumbnail">
+                        <img src="resources/thumbnails/More.png"/>
+                    </div>
+                    <div class="project-box-name">
+                        Miscellaneous
+                    </div>
+                    <div class="project-box-madewith">
+                         
+                    </div>
+                </div>
+
                 </div>
             </div>
         </div>
@@ -279,7 +288,7 @@
                 </div>
                 <div class="project-decription-header"><div class="project-decription-header-underline"></div>Context</div>
                 <div class="project-description-text">
-                    This was my second-year algorithmics project at university, made in a team of 4. I was the project manager, lead gameplay programmer, and graphics programmer.
+                    This was my second-year algorithmics project at university, made in a team of four. I was the project manager, lead gameplay programmer, and graphics programmer.
                 </div>
                 <div class="project-button-wrapper"><a class="project-button" href="https://dt-mark.itch.io/chess-wars" target="_blank">See More</a></div>
             </div>
@@ -375,15 +384,11 @@
         <!-- More Projects content template -->
         <div class="project-template" id="more">
 
+            <!--
             <div class="project-box projet-box-zoomin">
                 <div class="project-box-date">
                     2020 - Now
                 </div>
-                <!--
-                <div class="project-box-duration">
-                    <span><i class="bi bi-clock"></i> 6 weeks</span>
-                </div>
-                -->
                 <div class="project-box-video">
                     <img src="resources/thumbnails/More.png"/>
                 </div>
@@ -394,10 +399,12 @@
                      
                 </div>
             </div>
-            <div class="project-descriptions">
-                <div class="project-decription-header"><div class="project-decription-header-underline"></div>Description</div>
+            -->
+            <div class="project-descriptions" style="width:85%">
+                <div class="project-decription-header"><div class="project-decription-header-underline"></div>Miscellaneous</div>
+                <br/>
                 <div class="project-description-text">
-                    Throughout my Msc Computer Science studies, I have worked on many different projects, revolving mostly around: <br/><br/>
+                    Throughout my <i>Msc Computer Science studies</i>, I have worked on many different projects, revolving mostly around: <br/><br/>
                     <ul>
                         <li>
                             Computer graphics with <a href="https://twitter.com/dtmark_/status/1335265083258245122" target="_blank">ray-marching shaders</a>
@@ -419,10 +426,23 @@
                         </li>
                     </ul>
                     <br/>
-                    I have also ventured into smaller side-projects such as: <br/><br/>
+                    During my <i>work experiences</i>, I also lead the development of: <br/><br/>
+                    <ul>
+                        <li>
+                            A gamified demonstrator based on "Where Is Waldo" to showcase an edge computer vision solution I developed (using Python Kivy)
+                        </li>
+                        <li>
+                            A gamified demonstrator to showcase a cloud-based machine-learning solution I developed (using Python Flask with JS/CSS)
+                        </li>
+                    </ul>
+                    <br/>
+                    Finally, I have also ventured into smaller <i>side-projects</i> such as: <br/><br/>
                     <ul>
                         <li>
                             Writing a <a href="https://twitter.com/dtmark_/status/1492533407359852544" target="_blank">Wordle solver</a> in Prolog
+                        </li>
+                        <li>
+                            Making a checkers game (using purely Python Tkinter)
                         </li>
                     </ul>
                 </div>
